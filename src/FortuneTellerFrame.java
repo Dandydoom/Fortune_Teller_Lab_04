@@ -39,7 +39,7 @@ public class FortuneTellerFrame extends JFrame {
     private JTextArea fortuneArea;
 
     public FortuneTellerFrame() {
-        setTitle("Fortune Teller");
+        setTitle("Confucius Walken Says");
         setLayout(new BorderLayout());
 
         add(buildTopPanel(), BorderLayout.NORTH);
@@ -61,7 +61,7 @@ public class FortuneTellerFrame extends JFrame {
             icon = new ImageIcon(imgURL);
         }
 
-        JLabel titleLabel = new JLabel("Fortune Teller", icon, SwingConstants.CENTER);
+        JLabel titleLabel = new JLabel("Confucius Walken Says", icon, SwingConstants.CENTER);
         titleLabel.setFont(titleFont);
         titleLabel.setHorizontalTextPosition(SwingConstants.CENTER);
         titleLabel.setVerticalTextPosition(SwingConstants.BOTTOM); // text sits below the image
@@ -88,7 +88,7 @@ public class FortuneTellerFrame extends JFrame {
     private JPanel buildBottomPanel() {
         JPanel bottomPanel = new JPanel();
 
-        JButton readButton = new JButton("Read My Fortune!");
+        JButton readButton = new JButton("Read My Walken Fortune!");
         readButton.setFont(buttonFont);
         readButton.addActionListener(e -> {
             fortuneArea.append(getRandomFortune() + "\n");
